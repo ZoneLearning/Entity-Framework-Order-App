@@ -40,11 +40,12 @@
             this.nudDiscount = new System.Windows.Forms.NumericUpDown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnConfirmOrder = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -138,6 +139,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(702, 224);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -149,19 +151,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.Location = new System.Drawing.Point(18, 307);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(371, 125);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnConfirmOrder
             // 
@@ -171,29 +161,48 @@
             this.btnConfirmOrder.TabIndex = 7;
             this.btnConfirmOrder.Text = "Siparişi Onayla";
             this.btnConfirmOrder.UseVisualStyleBackColor = true;
+            this.btnConfirmOrder.Click += new System.EventHandler(this.btnConfirmOrder_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.Location = new System.Drawing.Point(18, 305);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(376, 127);
+            this.listView1.TabIndex = 8;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Ürün Adı";
-            this.columnHeader1.Width = 149;
+            this.columnHeader1.Width = 131;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Fiyat";
-            this.columnHeader2.Width = 138;
+            this.columnHeader2.Width = 93;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "İndirim";
-            this.columnHeader3.Width = 77;
+            this.columnHeader3.Text = "Adet";
+            this.columnHeader3.Width = 86;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "İndirim";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(726, 444);
-            this.Controls.Add(this.btnConfirmOrder);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnConfirmOrder);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.nudDiscount);
@@ -208,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Müşteri";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -230,11 +240,12 @@
         private System.Windows.Forms.NumericUpDown nudDiscount;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnConfirmOrder;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button btnConfirmOrder;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
 
