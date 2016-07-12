@@ -65,7 +65,7 @@
             this.cmbCustomer.Location = new System.Drawing.Point(503, 277);
             this.cmbCustomer.Name = "cmbCustomer";
             this.cmbCustomer.Size = new System.Drawing.Size(121, 21);
-            this.cmbCustomer.TabIndex = 1;
+            this.cmbCustomer.TabIndex = 4;
             // 
             // label2
             // 
@@ -82,7 +82,7 @@
             this.cmbEmployee.Location = new System.Drawing.Point(503, 305);
             this.cmbEmployee.Name = "cmbEmployee";
             this.cmbEmployee.Size = new System.Drawing.Size(121, 21);
-            this.cmbEmployee.TabIndex = 1;
+            this.cmbEmployee.TabIndex = 5;
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.cmbShipVia.Location = new System.Drawing.Point(503, 334);
             this.cmbShipVia.Name = "cmbShipVia";
             this.cmbShipVia.Size = new System.Drawing.Size(121, 21);
-            this.cmbShipVia.TabIndex = 1;
+            this.cmbShipVia.TabIndex = 6;
             // 
             // label4
             // 
@@ -124,7 +124,7 @@
             this.nudQuantity.Location = new System.Drawing.Point(18, 278);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(97, 20);
-            this.nudQuantity.TabIndex = 2;
+            this.nudQuantity.TabIndex = 1;
             // 
             // nudDiscount
             // 
@@ -139,14 +139,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(702, 224);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 0;
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(248, 275);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +168,7 @@
             this.btnConfirmOrder.Location = new System.Drawing.Point(503, 362);
             this.btnConfirmOrder.Name = "btnConfirmOrder";
             this.btnConfirmOrder.Size = new System.Drawing.Size(121, 34);
-            this.btnConfirmOrder.TabIndex = 6;
+            this.btnConfirmOrder.TabIndex = 7;
             this.btnConfirmOrder.Text = "Siparişi Onayla";
             this.btnConfirmOrder.UseVisualStyleBackColor = true;
             // 
